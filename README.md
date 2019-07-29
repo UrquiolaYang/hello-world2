@@ -19,7 +19,7 @@
 	('--mul_grams', default='吴，总，银行', help='用于输入bigram或者trigram，用中文逗号代替空格')
 	('--mul_grams_logpro',type=float, default=-10, help='修改bigram或者trigram为指定值')
 
-- 当传入参数--correct_word neg_modify 则不修正substiution错误，当传入参数--opt.mul_grams neg_modify则不单独修正某个gram的logLikelihood
+- 
 
 - 用法实例1 
 
@@ -34,6 +34,15 @@
 
 	python modify_lm.py --mul_grams '吴，总，银行' --mul_grams_logpro -10 --original_lm /data/app/yangyf/lm/3gram.kn111.up --modified_lm /data/app/yangyf/lm/new_ngram_lm4
 
+- 注意
+
+当传入参数
+
+	--correct_word neg_modify 
+则不修正substiution错误，
+
+	--opt.mul_grams neg_modify
+则不单独修正某个gram的logLikelihood
 
 #### 环境依赖
 
